@@ -1,0 +1,12 @@
+@import '../../style.scss';
+
+.aside{
+    background: $secondary-color;
+    //min-height: auto;
+}
+
+.orden:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}

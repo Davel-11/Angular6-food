@@ -1,0 +1,62 @@
+@import '../style.scss';
+
+.container-style {
+    background: white;
+    position: absolute;
+    
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    height: 100vh;
+}
+
+.header{
+    background: $primary-color;    
+    color: $primary-text-color;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    height: 40px;
+    width: 100%;
+
+    border-style: solid;
+    border-color: black;
+
+}
+
+.aside{
+    background: $primary-color;    
+    color: $primary-text-color;
+
+    height: 100vh;    
+    // width: 300px;
+    // position: fixed;
+    // z-index: 10;
+    font-size: 12px;
+
+    border-style: solid;
+    border-color: black;
+}
+
+.inside-content{
+    background: $content-color;
+    // left: 175px;
+
+    height: 100vh;
+    border-style: solid;
+    border-color: black;
+}
+
+
+  
+
+
+.title{
+    background: $secondary-color;
+    color: $primary-text-color;
+}

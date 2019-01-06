@@ -1,0 +1,51 @@
+<div class="aside">
+
+<mat-accordion>
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Ordenes
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <p class="orden">Ingresar Orden</p>
+    <p>Ver Ordenes del Dia</p>
+    <p>Eliminar Ordenes</p>
+    
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                      (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Reportes
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+    <p>Reporte 1</p>
+    <p>Reporte 2</p>
+    <p>Reporte 3</p>
+    
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                        (closed)="panelOpenState = false">
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Administración
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <p>Administrar Usuarios</p>
+
+  </mat-expansion-panel>
+
+
+</mat-accordion>
+
+
+</div>
