@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TestChildComponent implements OnInit {
 
-  @Input('Hijo')  element : { id: number, name: string }
+  @Input('test-child')  element : { id: number, name: string }
 
   constructor() { }
 

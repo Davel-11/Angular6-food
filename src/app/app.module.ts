@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './aside/user/user.component';
 import { BranchComponent } from './aside/branch/branch.component';
 import {MatButtonModule} from '@angular/material/button';
+import { TestChild2Component } from './aside/test/test-child2/test-child2.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MatButtonModule} from '@angular/material/button';
     HomeComponent,
     UserComponent,
     TestComponent,
-    TestChildComponent
+    TestChildComponent,
+    TestChild2Component
   ],
   imports: [
     BrowserModule,

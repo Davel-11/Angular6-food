@@ -1,7 +1,7 @@
 @import '../style.scss';
 
 .container-style {
-    background: white;
+    background: $content-color;
     position: absolute;
     
     top: 40px;
@@ -9,8 +9,11 @@
     left: 0;
     right: 0;
     
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
+
+$width-aside: 20%;
 
 .header{
     background: $primary-color;    
@@ -29,16 +32,24 @@
 
 }
 
+
+
 .aside{
     background: $primary-color;    
     color: $primary-text-color;
 
-    height: 100vh;    
-    // width: 300px;
-    // position: fixed;
-    // z-index: 10;
-    font-size: 12px;
+    height: 100%;
+    min-height: 100vh;
+    
+    bottom: 0; 
+    top: 40px;
 
+    width: $width-aside;
+    //max-width: 225px;
+    position: fixed;
+    z-index: 10;
+
+    font-size: 12px;
     border-style: solid;
     border-color: black;
 }
@@ -47,9 +58,18 @@
     background: $content-color;
     // left: 175px;
 
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+
+    width: 100% - $width-aside;
+    
     border-style: solid;
     border-color: black;
+
+    
+    bottom: 0;
+    left: $width-aside;
+    right: 0;
 }
 
 

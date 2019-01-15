@@ -8,9 +8,19 @@ import { mixinColor } from '@angular/material/core';
 })
 export class TestComponent implements OnInit {
 
-  serverElements = [
+  userList = [
     { id: 1, name: 'davel' },
-    { id: 2, name: 'manfus' }
+    { id: 2, name: 'manfus' },
+    { id: 3, name: 'Adriano-Ronaldo' },
+    { id: 1, name: 'davel' },
+    { id: 2, name: 'manfus' },
+    { id: 3, name: 'Adriano-Ronaldo' },
+    { id: 1, name: 'davel' },
+    { id: 2, name: 'manfus' },
+    { id: 3, name: 'Adriano-Ronaldo' },
+    { id: 1, name: 'davel' },
+    { id: 2, name: 'manfus' },
+    { id: 3, name: 'Adriano-Ronaldo' }
   ];
 
   constructor() { }

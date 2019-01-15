@@ -2,4 +2,4 @@
   test works!  
 </p>
 
-<app-test-child [Hijo]='serverElements[1]'></app-test-child>
+<app-test-child *ngFor="let i of userList" [test-child]="i"></app-test-child>
