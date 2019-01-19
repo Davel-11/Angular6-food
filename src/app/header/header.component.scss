@@ -1,5 +1,44 @@
+@import '../../style.scss';
 
-.header{
-    /* background: aqua;
-    min-height: 40px; */
+.header-main {    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    
+    padding: 5px;
+    height: 100%;    
+    
+    background-color: yellow;
+    color: black;     
+
+    .menu-show {
+        display: none;
+    }
+
+    .menu-left {
+        display: flex;  
+        align-items: center;
+        padding: 15px
+    }
+
+    
+    @media (max-width: 768px) {
+        background-color: green;
+        .menu-right {
+            display: none;            
+        }
+
+        .menu-title {
+            display: none;
+        }
+        
+        .menu-show {
+            display: flex;
+        }
+    }
 }
+
+
+
+    
+

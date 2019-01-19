@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './aside/test/test.component';
 import { TestChildComponent } from './aside/test/test-child/test-child.component';
+
 //routing
 import {RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +19,7 @@ import { UserComponent } from './aside/user/user.component';
 import { BranchComponent } from './aside/branch/branch.component';
 import {MatButtonModule} from '@angular/material/button';
 import { TestChild2Component } from './aside/test/test-child2/test-child2.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import { TestChild2Component } from './aside/test/test-child2/test-child2.compon
     MatInputModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule,
 
     //routing
     RouterModule.forRoot([
