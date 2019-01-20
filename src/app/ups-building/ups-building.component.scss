@@ -1,0 +1,24 @@
+.ups-building {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: black;
+
+    .ups-image {
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .icon-color {        
+        background: none;
+        margin-right: 15px;
+    }
+
+    .mat-icon {
+        font-size: 50px;        
+        color: black;
+    }
+
+}

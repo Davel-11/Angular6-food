@@ -1,42 +1,167 @@
-<div class="row header-main">
+<div class="header-main">
 
-    <div class="col-sm-6 col-6 col-lg-6 col-xl-6">
-        
-        <div class="row menu-left">
+    <div class="menu-left" (click)="isActiveEvent(0)">
 
-                <label class="menu-title">English Online GT 2</label>
-
-
-                <section class="menu-show">
-                    <button>
-                        Menu                
-                    </button>
-                </section>
-        </div>
+        <a routerLink=""><h3 class="color-links"> English on GT </h3></a>
 
     </div>
 
-    <div class="col-sm-6 col-6 col-lg-6 col-xl-6 menu-right">
+    <div class=" menu-right">
      
-        <div class="row">
-
-            <div class="col-sm-3 col-3 col-lg-3 col-xl-3">
-                <a routerLink="/user"> Contacto </a>
+            <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link"
+                [ngClass]="{'isActive' : isActive.contact }"
+                (click)="isActiveEvent(1)">
+                <a routerLink="/ups-building" > 
+                    <strong>
+                        <p class="color-links"> Contacto </p>
+                    </strong>
+                 </a>
             </div>
             
-            <div class="col-sm-3 col-3 col-lg-3 col-xl-3">
-                <a routerLink="/user"> Horarios </a>
+            <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link" 
+                 [ngClass]="{'isActive' : isActive.info }"
+                 (click)="isActiveEvent(2)">
+                    <a routerLink="/ups-building">
+                        <strong>
+                            <p class="color-links"> Información </p>
+                        </strong>
+                    </a>
             </div>
 
-            <div class="col-sm-3 col-3 col-lg-3 col-xl-3">
-                <a routerLink="/user"> Localizaciones </a>
+            <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link"
+                [ngClass]="{'isActive' : isActive.location }"
+                 (click)="isActiveEvent(3)">
+                    <a routerLink="/ups-building">
+                        <strong>
+                            <p class="color-links"> Ubicacion </p>
+                        </strong>
+                    </a>
             </div>
 
-            <div class="col-sm-3 col-3 col-lg-3 col-xl-3">
-                <a routerLink="/user"> Acerca de </a>
+            <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link"
+                [ngClass]="{'isActive' : isActive.material }"
+                (click)="showMoreOptions(); isActiveEvent(4)">
+                   
+                        <strong>
+                            <p class="color-links"> Mas </p>
+                        </strong>
+                   
             </div>
-        </div>
 
     </div>
+
+
+    <div class="menu-phone-2">
+        <a routerLink="" class="color-links">
+            <label>English GT </label>
+        </a>
+    </div>
+
+    <div class="menu-phone" (click)="showMenuPhone()">
+        
+            <button mat-button  class="mat-icons">
+                <mat-icon>menu_vert</mat-icon>          
+            </button>
+                
+    </div>
+        
   
+</div>
+
+
+<div class="menu-phone-hidden" *ngIf="menuPhone">
+        <mat-list>
+                <mat-list-item class="menu-hidden" >
+                        <a routerLink="/ups-building" 
+                            class="a-width" 
+                            (click)="showMenuPhone()"> 
+                            <strong>
+                                <p class="color-links"> Contacto </p>
+                            </strong>
+                         </a>                  
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                
+                <mat-list-item class="menu-hidden">
+                        <a routerLink="/ups-building" 
+                        class="a-width"
+                        (click)="showMenuPhone()"> 
+                            <strong>
+                                <p class="color-links"> Información </p>
+                            </strong>
+                         </a> 
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                
+                <mat-list-item class="menu-hidden">
+                        <a routerLink="/ups-building" 
+                            class="a-width"
+                            (click)="showMenuPhone()"> 
+                            <strong>
+                                <p class="color-links"> Ubicación </p>
+                            </strong>
+                         </a> 
+                </mat-list-item>                
+                <mat-divider></mat-divider>                
+
+                <mat-list-item class="menu-hidden">
+                        <a routerLink="/ups-building" 
+                            class="a-width"
+                            (click)="showMenuPhone(); showMoreOptions()"> 
+                            <strong>
+                                <p class="color-links"> Mas </p>
+                            </strong>
+                         </a> 
+                </mat-list-item>
+                <mat-divider></mat-divider>                
+        </mat-list>
+</div>
+
+
+<div class="menu-more-hidden" *ngIf="menuMore">
+        <mat-list>
+                <mat-list-item class="menu-hidden" >
+                        <a routerLink="/ups-building" 
+                            class="a-width" 
+                            (click)="showMoreOptions()"> 
+                            <strong>
+                                <p class="color-links"> Más sobre Clases para niños </p>
+                            </strong>
+                         </a>                  
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                
+                <mat-list-item class="menu-hidden">
+                        <a routerLink="/ups-building" 
+                        class="a-width"
+                        (click)="showMoreOptions()"> 
+                            <strong>
+                                <p class="color-links"> Más sobre Clases para Adultos y Jovenes </p>
+                            </strong>
+                         </a> 
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                
+                <mat-list-item class="menu-hidden">
+                        <a routerLink="/ups-building" 
+                            class="a-width"
+                            (click)="showMoreOptions()"> 
+                            <strong>
+                                <p class="color-links"> Más sobre Clases para enfoque para call center </p>
+                            </strong>
+                         </a> 
+                </mat-list-item>                
+                <mat-divider></mat-divider>                
+
+                <mat-list-item class="menu-hidden">
+                        <a routerLink="/ups-building" 
+                            class="a-width"
+                            (click)="showMoreOptions()"> 
+                            <strong>
+                                <p class="color-links"> Material de apoyo </p>
+                            </strong>
+                         </a> 
+                </mat-list-item>
+                <mat-divider></mat-divider>                
+        </mat-list>
 </div>

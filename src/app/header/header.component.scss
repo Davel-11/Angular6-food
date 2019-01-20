@@ -1,44 +1,165 @@
 @import '../../style.scss';
 
-.header-main {    
+.header-main {
+    height: 100%;
+    
+    background-color: $primary-color;
+    color: $primary-text-color; 
+    
     display: flex;
     align-items: center;
-    justify-content: flex-end; 
-    
-    padding: 5px;
-    height: 100%;    
-    
-    background-color: yellow;
-    color: black;     
 
-    .menu-show {
+    
+    .mat-icons {
+        background: none;
+    }
+
+    .menu-phone  {
+        display: none;
+    }
+
+    .menu-phone-2 {
         display: none;
     }
 
     .menu-left {
-        display: flex;  
-        align-items: center;
-        padding: 15px
+        margin-left: 10px;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 8px;
     }
 
+    .menu-right {
+        height: 100%;
+        width: 100%;  
+    }
+
+    .menu-right-link {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 8px;
+
+        font-size: 17px;
+
+    }
+
+     .menu-right-link:hover {
+         background: $secondary-color;
+     }    
+ 
+
+    .color-links {
+        color: white;
+        
+    }
     
+    a:link {
+        text-decoration: none;
+    }
+
+    // a:active {
+    //     background-color: black;
+    // } 
+
+    .isActive {
+        background: $secondary-color;
+    }
+
+
+
     @media (max-width: 768px) {
-        background-color: green;
+        background-color: $primary-color;
+        //color: $primary-text-color; 
+
         .menu-right {
             display: none;            
         }
 
-        .menu-title {
+        .menu-left {
             display: none;
         }
         
-        .menu-show {
-            display: flex;
+        .menu-phone {            
+            display: flex;  
+            justify-content: flex-end;            
+            margin-right: 10px;
+            width: 100%;
+
+            
+
+        }
+
+        .menu-phone-2 {            
+            display: flex;  
+            justify-content: flex-start;
+
+            margin-left: 10px;
+            width: 100%;      
+
         }
     }
 }
 
 
 
+.menu-phone-hidden {
+    width: 100%;
+    min-height: 100px;
+    background: $third-color;
+    color: white;
+
+    a:link {
+        text-decoration: none;
+    }
+
+    .color-links {
+        color: white;
+        
+    }
+
+    .a-width {
+        padding-top: 15px;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+.menu-hidden:hover {
+    background: $primary-color;
+}
     
 
+.matMenu  {
+    top: 160px;
+    background: black;
+}
+
+.menu-more-hidden {
+    width: 100%;
+    min-height: 100px;
+    background: $secondary-color;
+    color: white;
+
+    right: 0px;
+
+
+    a:link {
+        text-decoration: none;
+    }
+
+    .color-links {
+        color: white;
+        
+    }
+
+    .a-width {
+        padding-top: 15px;
+        width: 100%;
+        height: 100%;
+    }
+}
