@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { MatDialog} from "@angular/material";
+import { ContactComponent } from '../inside-content/contact/contact.component';
+
 export interface IsActive {
   contact: boolean,
   info: boolean,
@@ -15,6 +18,10 @@ export interface IsActive {
 })
 export class HeaderComponent implements OnInit {
 
+  more1 = 'para Niños';
+  more2 = 'Jovenes y Adultos';
+  more3 = 'Call Center';
+  more4 = 'Material de apoyo';
   
   isActive = {
     contact : false,
@@ -27,6 +34,7 @@ export class HeaderComponent implements OnInit {
   menuMore = false;
 
   constructor(
+    public matDialog : MatDialog
   ) { }
 
   ngOnInit() {
@@ -90,6 +98,12 @@ export class HeaderComponent implements OnInit {
       this.menuMore = true;
     }
     this.resetValues();
+  }
+
+  openDialogForm(){
+    this.matDialog.open( ContactComponent, {
+      disableClose: false,
+    })
   }
 
 }

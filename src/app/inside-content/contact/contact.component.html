@@ -1,3 +1,64 @@
-<p>
-  contact works!
-</p>
+<div class="contact">
+
+<div class="contact-content">
+
+    <h3 class="titles-data text-center" >¿Te gustaría recibir más información?</h3>
+  
+  <br>
+  
+  <form [formGroup]="form">
+
+    <mat-form-field  class="form-field" appearance="outline">
+        <mat-label>Nombre</mat-label>
+      <input matInput
+        placeholder="Nombre"
+        formControlName="name">        
+    </mat-form-field>
+
+    <mat-form-field  class="form-field" appearance="outline" >
+        <mat-label>Telefonó</mat-label>
+      <input matInput
+        placeholder="Telefonó"
+        formControlName="phone">        
+    </mat-form-field>
+
+
+    <mat-form-field  class="form-field" appearance="outline">
+        <mat-label>Correo</mat-label>
+      <input matInput
+        placeholder="Correo"
+        formControlName="email">  
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-select placeholder="Programa de Interés" formControlName="program">
+         <mat-option value="kids">Niños</mat-option>
+         <mat-option value="yong">Jovenes y Adultos</mat-option>
+         <mat-option value="call-center">Call Center</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field  class="form-field" appearance="outline">
+        <mat-label>Comentarios</mat-label>
+      <textarea matInput
+        placeholder="Comentarios"
+        formControlName="comments"> 
+      </textarea>
+    </mat-form-field>
+
+
+    <button mat-flat-button
+      (click)="SubmitForm()"
+      [disabled]="!form.valid">
+      Enviar
+    </button>
+
+
+  </form>
+  
+  
+</div>
+
+
+</div>

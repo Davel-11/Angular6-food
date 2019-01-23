@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 
 //material
-import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './aside/test/test.component';
@@ -29,6 +28,12 @@ import { UpsBuildingComponent } from './ups-building/ups-building.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule,  ReactiveFormsModule, FormControl } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 @NgModule({
   declarations: [
@@ -46,13 +51,21 @@ import {MatListModule} from '@angular/material/list';
     LocationComponent,
     MaterialComponent,
     FooterComponent,
-    UpsBuildingComponent
+    UpsBuildingComponent,
+
   ],
   imports: [
+    MatFormFieldModule,
+    FormsModule,
+    
+    ReactiveFormsModule,
+    MatSelectModule,
+
+
     BrowserModule,
+    MatDialogModule,
 
     //material
-    MatExpansionModule,
     MatInputModule,
     BrowserAnimationsModule,
     MatButtonModule,

@@ -8,42 +8,45 @@
 
     <div class=" menu-right">
      
+            <a routerLink="/contact">
             <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link"
                 [ngClass]="{'isActive' : isActive.contact }"
-                (click)="isActiveEvent(1)">
-                <a routerLink="/ups-building" > 
-                    <strong>
-                        <p class="color-links"> Contacto </p>
-                    </strong>
-                 </a>
+                (click)="isActiveEvent(1);">
+                        <strong>
+                            <p class="color-links"> Contacto </p>
+                        </strong>
             </div>
+            </a>
             
+            <a routerLink="/ups-building">
             <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link" 
                  [ngClass]="{'isActive' : isActive.info }"
                  (click)="isActiveEvent(2)">
-                    <a routerLink="/ups-building">
+                    
                         <strong>
-                            <p class="color-links"> Información </p>
+                            <p class="color-links"> Acerca de Nosotrós </p>
                         </strong>
-                    </a>
+                    
             </div>
+            </a>
 
+            <a routerLink="/location">
             <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link"
                 [ngClass]="{'isActive' : isActive.location }"
                  (click)="isActiveEvent(3)">
-                    <a routerLink="/ups-building">
+                    
                         <strong>
                             <p class="color-links"> Ubicacion </p>
                         </strong>
-                    </a>
             </div>
+            </a>
+
 
             <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link"
-                [ngClass]="{'isActive' : isActive.material }"
                 (click)="showMoreOptions(); isActiveEvent(4)">
                    
                         <strong>
-                            <p class="color-links"> Mas </p>
+                            <p class="color-links"> Información de clases </p>
                         </strong>
                    
             </div>
@@ -72,9 +75,9 @@
 <div class="menu-phone-hidden" *ngIf="menuPhone">
         <mat-list>
                 <mat-list-item class="menu-hidden" >
-                        <a routerLink="/ups-building" 
+                        <a routerLink="/contact" 
                             class="a-width" 
-                            (click)="showMenuPhone()"> 
+                            (click)="showMenuPhone();"> 
                             <strong>
                                 <p class="color-links"> Contacto </p>
                             </strong>
@@ -83,11 +86,11 @@
                 <mat-divider></mat-divider>
                 
                 <mat-list-item class="menu-hidden">
-                        <a routerLink="/ups-building" 
+                        <a routerLink="/location" 
                         class="a-width"
                         (click)="showMenuPhone()"> 
                             <strong>
-                                <p class="color-links"> Información </p>
+                                <p class="color-links"> Ubicaciónes </p>
                             </strong>
                          </a> 
                 </mat-list-item>
@@ -98,7 +101,7 @@
                             class="a-width"
                             (click)="showMenuPhone()"> 
                             <strong>
-                                <p class="color-links"> Ubicación </p>
+                                <p class="color-links"> Acera de Nosotrós </p>
                             </strong>
                          </a> 
                 </mat-list-item>                
@@ -109,7 +112,7 @@
                             class="a-width"
                             (click)="showMenuPhone(); showMoreOptions()"> 
                             <strong>
-                                <p class="color-links"> Mas </p>
+                                <p class="color-links"> Información de clases </p>
                             </strong>
                          </a> 
                 </mat-list-item>
@@ -125,7 +128,7 @@
                             class="a-width" 
                             (click)="showMoreOptions()"> 
                             <strong>
-                                <p class="color-links"> Más sobre Clases para niños </p>
+                                <p class="color-links"> {{ more1 }} </p>
                             </strong>
                          </a>                  
                 </mat-list-item>
@@ -136,7 +139,7 @@
                         class="a-width"
                         (click)="showMoreOptions()"> 
                             <strong>
-                                <p class="color-links"> Más sobre Clases para Adultos y Jovenes </p>
+                                <p class="color-links"> {{ more2 }} </p>
                             </strong>
                          </a> 
                 </mat-list-item>
@@ -147,18 +150,20 @@
                             class="a-width"
                             (click)="showMoreOptions()"> 
                             <strong>
-                                <p class="color-links"> Más sobre Clases para enfoque para call center </p>
+                                <p class="color-links"> {{ more3 }} </p>
                             </strong>
                          </a> 
-                </mat-list-item>                
-                <mat-divider></mat-divider>                
+                </mat-list-item>  
+
+                <mat-divider></mat-divider>
+                <mat-divider></mat-divider>
 
                 <mat-list-item class="menu-hidden">
                         <a routerLink="/ups-building" 
                             class="a-width"
                             (click)="showMoreOptions()"> 
                             <strong>
-                                <p class="color-links"> Material de apoyo </p>
+                                <p class="color-links"> {{ more4 }} </p>
                             </strong>
                          </a> 
                 </mat-list-item>
