@@ -5,10 +5,9 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    background: pink;
+    background: $primary-color;
     min-height: 100px;
 }
-
 
 .home-image {
     width: 100%;
@@ -16,11 +15,12 @@
 }
 
 .home-section-1 {
-    max-width: 100%;
+    max-width: 100%;    
     height: 100%;
-    background: $secondary-color;
-    min-height: 500px;
+    min-height: 100px;
 
+    background: $secondary-color;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,32 +28,71 @@
     .sub-section-1 {
         background: none;
         color: white;
-        padding: 25px
-
+        padding: 35px;
+        font-size: 17px;
     }
 
-    .image-home-anuncio {
-
-        max-width: 100%;
-        padding: 25px;
-        height: auto;
-        border-style: solid;
-        border-color: white;
+    .titles {
+        color: $primary-text-color;
     }
+    
 }
-
-
 
 .home-section-2 {
     width: 100%;
+    max-width: 100%;
     height: 100%;
+    min-height: 100px;
     background: red;
-    height: 500px;
+
+
+    
 }
 
 .home-section-3 {
+
+
     width: 100%;
-    background: green;
-    height: 500px;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100px;
+    background: none;
+    
+    color: $secondary-color;
+    font-size: 17px;
+
+    .pic-section-3a {
+
+        border-radius: 46%;
+        width: 90%;
+        max-width: 70%;
+        height: 70%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        
+    }
+
+    .text-section-3a {
+        width: 75%;
+        
+        padding: 20px;
+        padding-bottom: 30px;
+        display: inline-block;
+    }
+
 }
 
+.home-section-4 {
+
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100px;
+    background: $secondary-color;
+    
+    color: $primary-text-color;
+
+    .section-4a{
+        font-size: 150px;
+    }
+}

@@ -1,5 +1,6 @@
 @import '../../../style.scss';
 
+
 .contact {
     padding: 15px;
     background: none;
@@ -47,4 +48,15 @@
         border-color: $primary-color;
         border-radius: 15px;
     }
+}
+
+.completed {
+    border-style: solid;
+    border-width: thick;
+    border-color: $primary-color;
+    border-radius: 10px;
+    color: $secondary-text-color;
+
+    display: flex;
+    justify-content: center;
 }

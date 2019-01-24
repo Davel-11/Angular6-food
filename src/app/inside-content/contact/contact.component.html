@@ -1,9 +1,14 @@
+
+
 <div class="contact">
+
+   
 
 <div class="contact-content">
 
     <h3 class="titles-data text-center" >¿Te gustaría recibir más información?</h3>
   
+    
   <br>
   
   <form [formGroup]="form">
@@ -49,14 +54,14 @@
 
 
     <button mat-flat-button
-      (click)="SubmitForm()"
+      (click)="SubmitForm(); openSnackBar()"
       [disabled]="!form.valid">
       Enviar
     </button>
 
-
   </form>
-  
+
+ 
   
 </div>
 

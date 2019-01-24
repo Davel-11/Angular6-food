@@ -68,7 +68,7 @@
     //min-height: calc(100vh - 60px);
 
     width: 100%;
-    min-height: calc(125vh - (60px + 165px) );
+    min-height: calc(100vh - (60px + 165px) );
 
     //background: rgb(170, 236, 238);
     // border-style: solid;
@@ -89,4 +89,9 @@
     color: white;
     font-size: 17px;
     padding: 15px;
+}
+
+
+.titles {
+    color: $primary-text-color;
 }

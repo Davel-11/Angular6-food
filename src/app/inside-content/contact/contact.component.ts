@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as emailjs from 'emailjs-com';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {MatSnackBar} from '@angular/material';
+import { MessageComponent } from '../message/message/message.component';
+
 
 export interface EmailData {
   name: string,
@@ -17,30 +20,34 @@ export interface EmailData {
 export class ContactComponent implements OnInit {
 
   form : FormGroup;
-  constructor() { }
+  completed : boolean = false;
+
+  constructor(public snackBar: MatSnackBar) { }
+
+  openSnackBar() {
+    this.snackBar.openFromComponent(MessageComponent, {
+      duration: 4500,
+    });
+  }
 
   ngOnInit() {
 
     this.form = new FormGroup({
       name : new FormControl('', [Validators.required]),
-      phone: new FormControl('', [Validators.required]),
+      phone: new FormControl('', [Validators.required, Validators.minLength(8)]),
       email :  new FormControl(''),
       program: new FormControl('', [Validators.required]),
       comments: new FormControl('', [Validators.required]),
-      
     });
     
-
   }
-
- 
 
   SubmitForm(){
     console.log("form values: ", this.form.value);
 
     this.sendEmail();
-
     this.form.reset();
+    this.completed  = false;
   }
 
   sendEmail(){
@@ -61,13 +68,13 @@ export class ContactComponent implements OnInit {
       "message_html": this.form.get('comments').value
    }
 
-    console.log("sending email ");
-    emailjs.send(service_id, template_id, template_params, user_id)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
-        console.log('FAILED...', error);
-      });;
+   this.completed = true;
+    // emailjs.send(service_id, template_id, template_params, user_id)
+    //   .then(function(response) {        
+    //     console.log('SUCCESS!', response.status, response.text);
+    //   }, function(error) {
+    //     console.log('FAILED...', error);
+    //   });;
 
   }
 

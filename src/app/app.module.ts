@@ -32,6 +32,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule,  ReactiveFormsModule, FormControl } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MessageComponent } from './inside-content/message/message/message.component';
+import { Menu1Component } from './inside-content/menu-right/menu1/menu1.component';
+import { Menu2Component } from './inside-content/menu-right/menu2/menu2.component';
+import { Menu3Component } from './inside-content/menu-right/menu3/menu3.component';
+import { Menu4Component } from './inside-content/menu-right/menu4/menu4.component';
 
 
 
@@ -52,6 +58,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     MaterialComponent,
     FooterComponent,
     UpsBuildingComponent,
+    MessageComponent,
+    Menu1Component,
+    Menu2Component,
+    Menu3Component,
+    Menu4Component,
 
   ],
   imports: [
@@ -73,6 +84,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatMenuModule,
     MatDividerModule,
     MatListModule,
+    MatSnackBarModule,
 
     //routing
     RouterModule.forRoot([
@@ -84,7 +96,13 @@ import {MatDialogModule} from '@angular/material/dialog';
       {path: 'info', component: InfoComponent },
       {path: 'location', component: LocationComponent },
       {path: 'material', component: MaterialComponent  },
-      {path: 'ups-building', component: UpsBuildingComponent  }
+      {path: 'ups-building', component: UpsBuildingComponent  },
+      {path: 'message', component: MessageComponent  },
+      
+      {path: 'menu1', component: Menu1Component  },
+      {path: 'menu2', component: Menu2Component  },
+      {path: 'menu3', component: Menu3Component  },
+      {path: 'menu4', component: Menu4Component  },
     ])
   ],
   providers: [],

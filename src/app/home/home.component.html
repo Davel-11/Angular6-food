@@ -1,58 +1,162 @@
 <div class="image-zone">
 
-        <img src="assets/images/home-image-one.jpg" 
-        alt="English on GT"
-        class="home-image">
-        
+        <div  [hidden]="!home1" class="w3-animate-right"  >
+        <img src="assets/images/homeSlides/home1.png"
+                alt="English on GT"
+                class="home-image">
+        </div>
+
+        <div  [hidden]="!home2" class="w3-animate-right"  >
+        <img src="assets/images/homeSlides/home2.jpg"
+                alt="English on GT"
+                class="home-image">
+        </div>
+
+        <div  [hidden]="!home3" class="w3-animate-right"  >
+        <img src="assets/images/homeSlides/home3.jpg"
+                alt="English on GT"
+                class="home-image">
+        </div>
+
+        <div  [hidden]="!home4" class="w3-animate-right"  >
+        <img src="assets/images/homeSlides/home4.jpg"
+                alt="English on GT"
+                class="home-image">
+        </div>
+
+
+        <div  [hidden]="!home5" class="w3-animate-right"  >
+        <img src="assets/images/homeSlides/home5.jpg"
+                alt="English on GT"
+                class="home-image">
+        </div>
+
+
 </div>
 
 <div class="home-section-1">
         
-        <!-- <div class="continer">
-                <div class="row">
-                        <div class="col-5 col-lg-5 col-xl-5 sub-section-1">
-                                <p>
-                                Impartimos clases particulares y tutorías de inglés de forma presencial y también en línea. Enseñamos desde nivel principiante hasta avanzado. Trabajamos con niños (de 6 - 12 años), jóvenes y adultos. Trabajamos con métodos modernos utilizando herramientas audiovisuales que garantizan el aprendizaje de una forma entretenida. !Olvídate de las clases aburridas y convencionales!
-                                </p>
-                        </div>
-
-                        <div class="col-5 col-lg-5 col-xl-5 sub-section-1">
-                                <img 
-                                 src="../../assets/images/anuncio.png"
-                                 alt="anuncio"
-                                 class="image-home-anuncio">
-                        </div>
-                </div>
-        </div> -->
-
 
         <table>
                 <tr>
-                        <td class="sub-section-1 text-center">
-                                Impartimos clases particulares y tutorías de inglés de forma presencial y también en línea. Enseñamos desde nivel principiante hasta avanzado. Trabajamos con niños (de 6 - 12 años), jóvenes y adultos. 
-                                Utilizamos métodos modernos haciendo uso de herramientas audiovisuales que garantizan el aprendizaje de una forma entretenida. !Olvídate de las clases aburridas y convencionales!    
-                        </td>
+                        <td><h3 class="titles text-center">  <strong> ¿Cómo Funciona? </strong> </h3></td>
                 </tr>
-
 
                 <tr>
-                        <td class="text-center">
-                                <img 
-                                src="../../assets/images/English-cover.jpg"
-                                alt="anuncio"
-                                class="image-home-anuncio">
+                        <td class="sub-section-1 text-center">
+                                Impartimos clases particulares y tutorías de inglés de forma presencial y 
+                                también en línea. Enseñamos desde nivel principiante hasta avanzado. 
+                                Trabajamos con niños (de 6 - 12 años), jóvenes y adultos. 
+                                Utilizamos métodos modernos haciendo uso de herramientas 
+                                audiovisuales que garantizan el aprendizaje de una forma entretenida. 
+                                ¡Olvídate de las clases aburridas y convencionales!    
                         </td>
                 </tr>
-
                 
         </table>
 
 </div>
 
-<!-- <div class="home-section-2">
-        
+ <div class="home-section-2">
+        <img src="assets/images/seccion2.jpg"
+        alt="English on GT"
+        class="home-image">
 </div>
 
 <div class="home-section-3">
 
-</div> -->
+        <div class="row d-flex text-center p-5">
+                <div class="col-4 col-lg-4 col-xl-4">
+                        <a routerLink="/menu1">
+                        <section >
+                                <img src="assets/images/section3/seccion3a.jpg"
+                                class="pic-section-3a">
+                        </section>
+
+                        <section class="row text-section-3a">
+                                <h3> <strong> Clases para niños (6-12 años)</strong></h3>                                
+                                <p> 
+                                Aprender inglés desde una edad temprana tiene muchas ventajas. 
+                                Contamos con métodos modernos e interactivos para que tus hijos se
+                                 divertirán mientras aprenden inglés.
+                                </p>
+                        </section>
+                        </a>
+                </div>
+
+                <div class="col-4 col-lg-4 col-xl-4">
+                        <a routerLink="/menu2">
+                        <section >
+                                
+                                <img src="assets/images/section3/seccion3b.jpg"
+                                class="pic-section-3a">
+                                
+                        </section>
+                        
+
+                        <section class="row text-section-3a">
+                                <h3> <strong> Clases para jóvenes y adultos</strong></h3>                                
+                                <p> 
+                                No importa si eres principiante o ya cuentas con un conocimiento básico
+                                 contamos con métodos innovadores que te ayudarán a acelerar tu aprendizaje. 
+                                Si tus actividades diarias no te permiten asistir a clases, no te preocupes 
+                                ya que también ofrecemos clases en línea.
+                                </p>
+                        </section>
+                        </a>
+                </div>
+
+                <div class="col-4 col-lg-4 col-xl-4">
+                        <a routerLink="/menu3">
+                        <section >
+                                        <img src="assets/images/section3/seccion3c.jpg"
+                                        class="pic-section-3a rounded">
+                        </section>
+
+                        <section class="row text-section-3a">
+                                <h3> <strong> Cursos Intensivos para Call-Center </strong></h3>                                
+                                <p> 
+                                                Si tu objetivo es mejorar tu inglés para aplicar
+                                                 a una plaza en un call center bilingüe y ya cuentas con un mínimo de 
+                                                 40% de inglés ¡esto es para tí!. Contamos con años de experiencia en 
+                                                 la industria de call-center y te entrenaremos en las áreas que necesites 
+                                                 reforzar.
+                                </p>
+                        </section>
+                        </a>    
+                </div>
+        </div>
+
+</div>
+
+ <div class="home-section-4">
+        
+                        <!-- <div class="col-6 col-lg-6 col-xl-6 section-4a text-right">
+                                
+                        </div>
+
+                        <div class="col-6 col-lg-6 col-xl-6 
+                                text-left d-flex align-items-center" 
+                                style=" height: 300px;">
+                                
+                        </div> -->
+
+                        <table style="width: 100%">
+                                <tr>
+                                        <td class="text-right ">
+                                                        <img src="assets/images/section4/what3.png"
+                                                        class="pic-section-4"
+                                                        style="width: 100px; height: 100px; padding: 20px">
+                                        </td>
+                                        <td class="text-left">
+                                                        <h1>4126-6271</h1>
+                                        </td>
+                                </tr>
+                        </table>
+       
+</div>
+
+
+<!-- <div class="home-section-3">
+
+</div>  -->
