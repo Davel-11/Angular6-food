@@ -3,7 +3,7 @@ import * as emailjs from 'emailjs-com';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {MatSnackBar} from '@angular/material';
 import { MessageComponent } from '../message/message/message.component';
-
+import { Router, NavigationEnd } from '@angular/router';
 
 export interface EmailData {
   name: string,
@@ -22,15 +22,27 @@ export class ContactComponent implements OnInit {
   form : FormGroup;
   completed : boolean = false;
 
-  constructor(public snackBar: MatSnackBar) { }
+  constructor(
+    public snackBar: MatSnackBar,
+    private router: Router
+    ) { }
 
   openSnackBar() {
+
     this.snackBar.openFromComponent(MessageComponent, {
       duration: 4500,
     });
   }
 
   ngOnInit() {
+
+
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+    });
 
     this.form = new FormGroup({
       name : new FormControl('', [Validators.required]),
@@ -69,12 +81,12 @@ export class ContactComponent implements OnInit {
    }
 
    this.completed = true;
-    // emailjs.send(service_id, template_id, template_params, user_id)
-    //   .then(function(response) {        
-    //     console.log('SUCCESS!', response.status, response.text);
-    //   }, function(error) {
-    //     console.log('FAILED...', error);
-    //   });;
+     emailjs.send(service_id, template_id, template_params, user_id)
+      .then(function(response) {        
+         console.log('SUCCESS!', response.status, response.text);
+       }, function(error) {
+         console.log('FAILED...', error);
+       });;
 
   }
 

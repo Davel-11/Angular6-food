@@ -38,6 +38,7 @@ import { Menu1Component } from './inside-content/menu-right/menu1/menu1.componen
 import { Menu2Component } from './inside-content/menu-right/menu2/menu2.component';
 import { Menu3Component } from './inside-content/menu-right/menu3/menu3.component';
 import { Menu4Component } from './inside-content/menu-right/menu4/menu4.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -85,6 +86,7 @@ import { Menu4Component } from './inside-content/menu-right/menu4/menu4.componen
     MatDividerModule,
     MatListModule,
     MatSnackBarModule,
+    MatCardModule,
 
     //routing
     RouterModule.forRoot([
