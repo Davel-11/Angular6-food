@@ -2,10 +2,12 @@
     <div class="row">
         
         <div class="header">    
-            <app-header></app-header>
+            <app-header
+            #hideMoreOptions>
+            </app-header>
         </div>    
 
-        <div class="inside-content">            
+        <div class="inside-content" (click)="closeMoreMenu()">       
             <router-outlet></router-outlet>
         </div>
 

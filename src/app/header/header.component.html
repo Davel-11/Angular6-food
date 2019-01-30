@@ -1,9 +1,7 @@
 <div class="header-main">
 
     <div class="menu-left" (click)="isActiveEvent(0)">
-
         <a routerLink=""><h3 class="color-links"> English on GT </h3></a>
-
     </div>
 
     <div class=" menu-right">
@@ -18,7 +16,7 @@
             </div>
             </a>
             
-            <a routerLink="/ups-building">
+            <a routerLink="/pricing">
             <div class="col-sm-3 col-3 col-lg-3 col-xl-3 menu-right-link" 
                  [ngClass]="{'isActive' : isActive.info }"
                  (click)="isActiveEvent(2)">
@@ -53,7 +51,6 @@
 
     </div>
 
-
     <div class="menu-phone-2">
         <a routerLink="" class="color-links">
             <label>English On GT </label>
@@ -67,8 +64,7 @@
             </button>
                 
     </div>
-        
-  
+    
 </div>
 
 
@@ -97,7 +93,7 @@
                 <mat-divider></mat-divider>
                 
                 <mat-list-item class="menu-hidden">
-                        <a routerLink="/ups-building" 
+                        <a routerLink="/pricing"                         
                             class="a-width"
                             (click)="showMenuPhone()"> 
                             <strong>
@@ -119,7 +115,6 @@
                 <mat-divider></mat-divider>                
         </mat-list>
 </div>
-
 
 <div class="menu-more-hidden" *ngIf="menuMore">
         <mat-list>

@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit {
       phone: new FormControl('', [Validators.required, Validators.minLength(8)]),
       email :  new FormControl(''),
       program: new FormControl('', [Validators.required]),
-      comments: new FormControl('', [Validators.required]),
+      comments: new FormControl(''),
     });
     
   }

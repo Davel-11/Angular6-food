@@ -14,17 +14,19 @@
 
 .contact-content {
         
-    width: 60%;
+    width: 70%;
 
-    padding: 35px;
+    padding: 20px;
 
     border-style: solid;
-    border-color: $primary-color;
-    border-radius: 15px;
+    border-color: $secondary-color;
+    //border-radius: 10px;
+    border-width: thin;
 }
 
 .form-field {
     width: 100%;
+    margin-bottom: 15px;
 }
 
 
@@ -42,11 +44,11 @@
     
         width: 100%;    
     
-        padding: 35px;
+        padding: 10px;
     
         border-style: solid;
-        border-color: $primary-color;
-        border-radius: 15px;
+        border-color: $secondary-color;
+        //border-radius: 10px;
     }
 }
 

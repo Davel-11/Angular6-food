@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, EventEmitter, Output } from '@angular/core';
 
 import { MatDialog} from "@angular/material";
 import { ContactComponent } from '../inside-content/contact/contact.component';
+
 
 export interface IsActive {
   contact: boolean,
@@ -9,6 +10,8 @@ export interface IsActive {
   location: boolean,
   material: boolean,
 }
+
+
 
 @Component({
   selector: 'app-header',
@@ -18,9 +21,9 @@ export interface IsActive {
 })
 export class HeaderComponent implements OnInit {
 
-  more1 = 'para Niños';
-  more2 = 'Jovenes y Adultos';
-  more3 = 'Call Center';
+  more1 = 'Niños';
+  more2 = 'Jovenes/Adultos';
+  more3 = 'Call-Center';
   more4 = 'Material de apoyo';
   
   isActive = {
@@ -32,6 +35,8 @@ export class HeaderComponent implements OnInit {
 
   menuPhone = false;
   menuMore = false;
+
+  //@Output() hideMoreOptions = new EventEmitter<any>();
 
   constructor(
     public matDialog : MatDialog
@@ -91,6 +96,11 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  
+  hideshowMenuPhone(){
+    this.menuPhone = false;
+  }
+
   showMoreOptions(){
     if(this.menuMore){
       this.menuMore = false;
@@ -98,6 +108,11 @@ export class HeaderComponent implements OnInit {
       this.menuMore = true;
     }
     this.resetValues();
+  }
+
+  hideMoreOptionsEvent(){    
+    this.menuMore = false;
+
   }
 
   openDialogForm(){

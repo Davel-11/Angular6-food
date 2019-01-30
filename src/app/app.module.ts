@@ -39,6 +39,7 @@ import { Menu2Component } from './inside-content/menu-right/menu2/menu2.componen
 import { Menu3Component } from './inside-content/menu-right/menu3/menu3.component';
 import { Menu4Component } from './inside-content/menu-right/menu4/menu4.component';
 import {MatCardModule} from '@angular/material/card';
+import { PricingComponent } from './inside-content/pricing/pricing.component';
 
 
 
@@ -64,6 +65,7 @@ import {MatCardModule} from '@angular/material/card';
     Menu2Component,
     Menu3Component,
     Menu4Component,
+    PricingComponent,
 
   ],
   imports: [
@@ -100,7 +102,8 @@ import {MatCardModule} from '@angular/material/card';
       {path: 'material', component: MaterialComponent  },
       {path: 'ups-building', component: UpsBuildingComponent  },
       {path: 'message', component: MessageComponent  },
-      
+      {path: 'pricing', component: PricingComponent  },
+
       {path: 'menu1', component: Menu1Component  },
       {path: 'menu2', component: Menu2Component  },
       {path: 'menu3', component: Menu3Component  },

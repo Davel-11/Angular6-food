@@ -7,36 +7,35 @@
 <div class="contact-content">
 
     <h3 class="titles-data text-center" >¿Te gustaría recibir más información?</h3>
-  
+    <mat-divider></mat-divider>
     
   <br>
   
   <form [formGroup]="form">
 
-    <mat-form-field  class="form-field" appearance="outline">
-        <mat-label>Nombre</mat-label>
+    <mat-form-field  class="form-field">
       <input matInput
         placeholder="Nombre"
-        formControlName="name">        
+        formControlName="name"
+        required>        
     </mat-form-field>
 
-    <mat-form-field  class="form-field" appearance="outline" >
-        <mat-label>Telefonó</mat-label>
+    <mat-form-field  class="form-field">
       <input matInput
         placeholder="Telefonó"
-        formControlName="phone">        
+        formControlName="phone"
+        required>        
     </mat-form-field>
 
 
-    <mat-form-field  class="form-field" appearance="outline">
-        <mat-label>Correo</mat-label>
+    <mat-form-field  class="form-field" >
       <input matInput
         placeholder="Correo"
         formControlName="email">  
     </mat-form-field>
 
     <mat-form-field class="form-field">
-      <mat-select placeholder="Programa de Interés" formControlName="program">
+      <mat-select placeholder="Programa de Interés" formControlName="program" required>
          <mat-option value="kids">Niños</mat-option>
          <mat-option value="yong">Jovenes y Adultos</mat-option>
          <mat-option value="call-center">Call Center</mat-option>

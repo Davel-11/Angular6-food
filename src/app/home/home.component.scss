@@ -101,3 +101,45 @@
     }
 
 }
+
+
+
+.button-left {    
+    position: fixed;
+    left: 5px;
+    top: 200px;
+    z-index: 100;
+    font-size: 40px;
+
+    
+}
+
+.button-right {
+
+    position: fixed;
+    right: 10px;
+    top: 200px;
+    z-index: 100;
+    font-size: 40px;
+}
+
+@media (max-width: 768px ) {
+    .button-left {    
+        position: fixed;
+        left: 5px;
+        top: 75px;
+        z-index: 100;
+        font-size: 40px;
+    
+        
+    }
+    
+    .button-right {
+    
+        position: fixed;
+        right: 10px;
+        top: 75px;
+        z-index: 100;
+        font-size: 40px;
+    }
+}

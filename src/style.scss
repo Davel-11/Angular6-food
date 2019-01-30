@@ -8,10 +8,15 @@ $third-color: #545d60;
 $third-text-color: #545d60;
 
 
-$content-color: white;
+$content-color: #e6e8ed;
 $links-color: black;
 
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
+.titles {
+    color: $secondary-color;
+    display: flex;
+    justify-content: center;    
+}
