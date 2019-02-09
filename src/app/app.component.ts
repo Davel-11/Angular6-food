@@ -16,7 +16,7 @@ export class AppComponent  {
 
   closeMoreMenu(){
     this.hideMoreOptions.hideMoreOptionsEvent();
-    this.hideMoreOptions.hideshowMenuPhone();
+    this.hideMoreOptions.hideshowMenuPhone();   
   }
 
 }
